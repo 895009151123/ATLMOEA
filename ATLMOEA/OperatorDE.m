@@ -1,37 +1,4 @@
 function Offspring = OperatorDE(Parent1,Parent2,Parent3,Parameter)
-%OperatorDE - The operator of differential evolution.
-%
-%   Off = OperatorDE(P1,P2,P3) uses the operator of differential evolution
-%   to generate offsprings based on the parents P1, P2, and P3. If P1, P2,
-%   and P3 are arrays of SOLUTION objects, then Off is also an array of
-%   SOLUTION objects; while if P1, P2, and P3 are matrices of decision
-%   variables, then Off is also a matrix of decision variables, i.e., the
-%   offsprings are not evaluated. Each object or row of P1, P2, and P3 is
-%   used to generate one offspring by P1 + 0.5*(P2-P3) and polynomial
-%   mutation.
-%
-%	Off = OperatorDE(P1,P2,P3,{CR,F,proM,disM}) specifies the parameters of
-%	operators, where CR and F are the parameters in differental evolution,
-%	proM is the expectation of the number of mutated variables, and disM is
-%	the distribution index of polynomial mutation.
-%
-%   Example:
-%       Off = OperatorDE(Parent1,Parent2,Parent3)
-%       Off = OperatorDE(Parent1.decs,Parent2.decs,Parent3.decs,{1,0.5,1,20})
-
-%------------------------------- Reference --------------------------------
-% H. Li and Q. Zhang, Multiobjective optimization problems with complicated
-% Pareto sets, MOEA/D and NSGA-II, IEEE Transactions on Evolutionary
-% Computation, 2009, 13(2): 284-302.
-%------------------------------- Copyright --------------------------------
-% Copyright (c) 2021 BIMK Group. You are free to use the PlatEMO for
-% research purposes. All publications which use this platform or any code
-% in the platform should acknowledge the use of "PlatEMO" and reference "Ye
-% Tian, Ran Cheng, Xingyi Zhang, and Yaochu Jin, PlatEMO: A MATLAB platform
-% for evolutionary multi-objective optimization [educational forum], IEEE
-% Computational Intelligence Magazine, 2017, 12(4): 73-87".
-%--------------------------------------------------------------------------
-
     %% Parameter setting
     if nargin > 3
         [CR,F,proM,disM] = deal(Parameter{:});

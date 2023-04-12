@@ -1,11 +1,12 @@
 classdef ATLMOEA < ALGORITHM
 % <multi/many> <real> <large/none> <constrained/none>
-% Large-scale multi-objective competitive swarm optimization algorithm
+% An adaptive two-stage evolutionary algorithm for large-scale continuous 
+%%multi-objective optimization
 
 %------------------------------- Reference --------------------------------
-% Y. Tian, X. Zheng, X. Zhang, and Y. Jin, Efficient large-scale multi-
-% objective optimization based on a competitive swarm optimizer, IEEE
-% Transactions on Cybernetics, 2020, 50(8): 3696-3708.
+% Lin Q, Li J, Liu S, et al. An Adaptive Two-Stage Evolutionary
+% Algorithm for Large-Scale Continuous Multi-Objective Optimization[J]. 
+% Swarm and Evolutionary Computation, 2023:101235.
 %------------------------------- Copyright --------------------------------
 % Copyright (c) 2021 BIMK Group. You are free to use the PlatEMO for
 % research purposes. All publications which use this platform or any code
